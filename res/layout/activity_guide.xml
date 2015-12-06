@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#a3c639">
+    <FrameLayout 
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+	<android.support.v4.view.ViewPager
+	    android:layout_width="match_parent" 
+	    android:layout_height="match_parent" 
+	    android:id="@+id/mini_guide_viewpager"
+	    android:background="@drawable/mini_guidemain_bg"/>
+	<ImageView 
+        android:id="@+id/mini_arrowleftimageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left|center_vertical"
+        android:src="@drawable/mini_arrowleft_icon"/>
+    <ImageView 
+        android:id="@+id/mini_arrowrightimageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right|center_vertical"
+        android:src="@drawable/mini_arrowright_icon"/>
+   <LinearLayout    
+	    android:id="@+id/mini_guide_point"    
+	    android:layout_width="fill_parent"    
+	    android:layout_height="wrap_content"    
+	    android:layout_gravity="bottom|center_horizontal"
+	    android:layout_marginBottom="40dp"    
+	    android:gravity="center_horizontal"    
+	    android:orientation="horizontal">
+	</LinearLayout>
+	
+   <ImageButton
+            android:id="@+id/clickenter_button"
+            style="@style/RoundTouchButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="280dp"
+            android:layout_marginLeft="120dp"
+            android:layout_weight="0"
+            android:contentDescription="@string/clickenter_button_description"
+            android:nextFocusDown="@+id/clickenter_button"
+            android:src="@drawable/btn_in_call_round_normal"
+            android:visibility="invisible">
+    </ImageButton>
+	</FrameLayout>
+</LinearLayout>

@@ -4,5 +4,8 @@
     <string name="app_name">miniPunchCard</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
+    <string name="title_activity_guide">GuideActivity</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="clickenter_button_description">click to enter</string>
 
 </resources>
