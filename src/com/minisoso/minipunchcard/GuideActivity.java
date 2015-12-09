@@ -2,11 +2,6 @@ package com.minisoso.minipunchcard;
 
 import java.util.ArrayList;
 
-
-
-
-
-
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -166,7 +161,7 @@ public class GuideActivity extends Activity {
         	 mini_enterButton.setVisibility(View.INVISIBLE);
          }
         	 //mini_enterButton.setVisibility(View.VISIBLE);
-             System.out.println("当前页码："+showNext);  
+             System.out.println("当前页码："+showNext);
            
      }  
        

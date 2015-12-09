@@ -1,14 +1,31 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width = "fill_parent"
+    android:layout_height = "fill_parent">
+    
+<LinearLayout
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:orientation="vertical"
     android:gravity="center"
     android:background="@drawable/mini_mainbg_default">
 
+    
+    
     <Button
-        android:id="@+id/button1"
+        android:id="@+id/setalarmbutton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@drawable/alarm_icon_getup"/>
+    
+    
+    
+    <include layout="@layout/mini_clockdatetime"
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
 
 </LinearLayout>
+
+
+
+</FrameLayout>

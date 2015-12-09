@@ -45,12 +45,12 @@ public class FirstInstallActivity extends Activity{
 			
 		}
 		if(mystartboolean == true){
-			LinearLayout.LayoutParams myparams = new LinearLayout.LayoutParams(
-					LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.MATCH_PARENT);
-			LinearLayout mylinearLayout = new LinearLayout(this);
-			mylinearLayout.setLayoutParams(myparams);
-			mylinearLayout.setOrientation(LinearLayout.VERTICAL);
-			mylinearLayout.setBackgroundResource(R.drawable.mini_mainbg_default);
+			//LinearLayout.LayoutParams myparams = new LinearLayout.LayoutParams(
+			//		LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.MATCH_PARENT);
+			//LinearLayout mylinearLayout = new LinearLayout(this);
+			//mylinearLayout.setLayoutParams(myparams);
+			//mylinearLayout.setOrientation(LinearLayout.VERTICAL);
+			//mylinearLayout.setBackgroundResource(R.drawable.mini_mainbg_default);
 			
 			new Handler().postDelayed(new Runnable(){
 				@Override
@@ -61,7 +61,7 @@ public class FirstInstallActivity extends Activity{
 				}
 			},1000);
 			
-			setContentView(mylinearLayout);
+			//setContentView(mylinearLayout);
 		}
 		
 	}
