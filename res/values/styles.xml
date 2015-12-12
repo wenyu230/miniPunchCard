@@ -26,5 +26,41 @@
         <item name="android:background">@drawable/incall_round_button</item>
     </style>
     
+	<style name = "MainBBLeft">
+		<item name = "android:gravity">center</item>
+		<item name = "android:layout_width">wrap_content</item>
+		<item name = "android:layout_height">wrap_content</item>
+		<item name = "android:background">@drawable/mini_btn_mainbbleft</item>
+	</style>
+	<style name = "MainBBRight">
+		<item name = "android:gravity">center</item>
+		<item name = "android:layout_width">wrap_content</item>
+		<item name = "android:layout_height">wrap_content</item>
+		<item name = "android:background">@drawable/mini_btn_mainbbright</item>
+	</style>
+	<style name = "MainBBMiddle">
+		<item name = "android:gravity">center</item>
+		<item name = "android:layout_width">wrap_content</item>
+		<item name = "android:layout_height">wrap_content</item>
+		<item name = "android:background">@drawable/mini_btn_mainbbmiddle</item>
+	</style>
+	
 
 </resources>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -37,8 +37,7 @@ public class MainActivity extends Activity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		//===
-		System.out.println("Debug Debug Debug");
+		//System.out.println("Debug Debug Debug");
 		initViews();
 		//setContentView(R.layout.activity_main);
 	}
@@ -65,15 +64,11 @@ public class MainActivity extends Activity {
 	
 	private void initViews() {
         // give up any internal focus before we switch layouts
-        //===
-		//===
-		final View focused = getCurrentFocus();
+        final View focused = getCurrentFocus();
         if (focused != null) focused.clearFocus();
 
         setContentView(R.layout.activity_main);
 
-        //===
-        //===
         myTime = (MiniDigitalClock) findViewById(R.id.time);
         myDate = (TextView) findViewById(R.id.date);
         //myDate.setText("Hello");
@@ -82,9 +77,58 @@ public class MainActivity extends Activity {
 
         //final View.OnClickListener alarmClickListener = new View.OnClickListener() {
         //    public void onClick(View v) {
-        //        startActivity(new Intent(DeskClock.this, AlarmClock.class));
+        //        startActivity(new Intent(MainActivity.this, AlarmClock.class));
         //    }
         //};
+		
+        final View.OnClickListener myLoginClickListener = new View.OnClickListener() {
+            public void onClick(View v) {
+                //startActivity(new Intent(MainActivity.this, AlarmClock.class));
+            }
+        };
+		final View.OnClickListener myTeamClickListener = new View.OnClickListener() {
+            public void onClick(View v) {
+                //startActivity(new Intent(MainActivity.this, AlarmClock.class));
+            }
+        };
+		final View.OnClickListener myProjectClickListener = new View.OnClickListener() {
+            public void onClick(View v) {
+                //startActivity(new Intent(MainActivity.this, AlarmClock.class));
+            }
+        };
+		final View.OnClickListener myStatisticClickListener = new View.OnClickListener() {
+            public void onClick(View v) {
+                //startActivity(new Intent(MainActivity.this, AlarmClock.class));
+            }
+        };
+		final View.OnClickListener myPcardBeginListener = new View.OnClickListener() {
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, PcardbeginActivity.class));
+            }
+        };
+		final View.OnClickListener myPcardFinishListener = new View.OnClickListener() {
+            public void onClick(View v) {
+                //startActivity(new Intent(MainActivity.this, AlarmClock.class));
+            }
+        };
+		
+        
+		final ImageButton minibtnlogin = (ImageButton) findViewById (R.id.mini_btnlogin);
+		//final
+		minibtnlogin.setOnClickListener(myLoginClickListener);
+		final ImageButton minibtnteam = (ImageButton) findViewById (R.id.mini_btnteam);
+		minibtnteam.setOnClickListener(myTeamClickListener);
+		final ImageButton minibtnproject = (ImageButton) findViewById (R.id.mini_btnproject);
+		minibtnproject.setOnClickListener(myProjectClickListener);
+		final ImageButton minibtnstatistic = (ImageButton) findViewById (R.id.mini_btnstatistic);
+		minibtnstatistic.setOnClickListener(myStatisticClickListener);
+		final ImageButton minibtnpcardbegin = (ImageButton) findViewById (R.id.mini_btnpcardbegin);
+		minibtnpcardbegin.setOnClickListener(myPcardBeginListener);
+		final ImageButton minibtnpcardfinish = (ImageButton) findViewById (R.id.mini_btnpcardfinish);
+		minibtnpcardfinish.setOnClickListener(myPcardFinishListener);
+		
+		
+		
     }
 	
 	private void refreshDate() {
@@ -92,15 +136,17 @@ public class MainActivity extends Activity {
         //if (DEBUG) Log.d(LOG_TAG, "refreshing date..." + now);
         //===
         //===
-        //myDate.setText(DateFormat.format(myDateFormat, now));
-        myDate.setText("Hello");
+        myDate.setText(DateFormat.format(myDateFormat, now));
+        //myDate.setText("Hello");
     }
 	
 	@Override
     public void onResume() {
         super.onResume();
         //===
-		//refreshDate();
+        myDateFormat = getString(R.string.full_wday_month_day_year);
+
+		refreshDate();
 	}
 	
 	private final BroadcastReceiver mIntentReceiver = new BroadcastReceiver() {
@@ -129,7 +175,7 @@ public class MainActivity extends Activity {
         IntentFilter filter = new IntentFilter();
         filter.addAction(Intent.ACTION_DATE_CHANGED);
         //filter.addAction(Intent.ACTION_BATTERY_CHANGED);
-//        filter.addAction(UiModeManager.ACTION_EXIT_DESK_MODE);
+		// filter.addAction(UiModeManager.ACTION_EXIT_DESK_MODE);
         //filter.addAction(ACTION_MIDNIGHT);
         registerReceiver(mIntentReceiver, filter);
     }

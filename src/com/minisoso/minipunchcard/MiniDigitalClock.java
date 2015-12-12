@@ -75,8 +75,8 @@ public class MiniDigitalClock extends LinearLayout {
 	        }
 
 	        void setIsMorning(boolean isMorning) {
-	            //mAmPm.setText(isMorning ? mAmString : mPmString);
-	        	mAmPm.setText("AM");
+	            mAmPm.setText(isMorning ? mAmString : mPmString);
+	        	//mAmPm.setText("AM");
 	        }
 	    }
 

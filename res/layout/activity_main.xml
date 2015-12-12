@@ -1,31 +1,50 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android = "http://schemas.android.com/apk/res/android"
     android:layout_width = "fill_parent"
     android:layout_height = "fill_parent">
     
 <LinearLayout
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    android:orientation="vertical"
-    android:gravity="center"
-    android:background="@drawable/mini_mainbg_default">
+    android:layout_width = "fill_parent"
+    android:layout_height = "fill_parent"
+    android:orientation = "vertical"
+    android:gravity = "center"
+    android:background = "@drawable/mini_mainbg_default">
 
     
     
-    <Button
-        android:id="@+id/setalarmbutton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@drawable/alarm_icon_getup"/>
+    <Button android:id = "@+id/setalarmbutton"
+				android:layout_width = "wrap_content"
+				android:layout_height = "wrap_content"
+				android:background = "@drawable/mini_punchcardicon"/>
     
     
     
-    <include layout="@layout/mini_clockdatetime"
-                android:layout_weight="1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
+    <include layout = "@layout/mini_datetimeshow"
+                android:layout_weight = "1"
+                android:layout_width = "wrap_content"
+                android:layout_height = "wrap_content"/>
+    
+    
 
+	
 </LinearLayout>
-
-
+<LinearLayout
+        android:id = "@+id/mini_mainpunchcardfunc"
+        android:layout_width = "fill_parent"
+        android:layout_height = "fill_parent"
+        android:orientation = "vertical"
+        android:paddingLeft = "30dip"
+        android:paddingTop = "120dip">
+	<include layout = "@layout/mini_mainpcardfuncbtn"/>
+	
+</LinearLayout>
+<LinearLayout
+        android:id = "@+id/mini_mainpunchcardbb"
+        android:layout_width = "fill_parent"
+        android:layout_height = "fill_parent"
+        android:orientation = "vertical"
+        android:paddingTop = "360dip">
+	<include layout = "@layout/mini_mainbottombtn" />
+	
+</LinearLayout>
 
 </FrameLayout>

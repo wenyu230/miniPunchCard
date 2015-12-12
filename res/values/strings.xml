@@ -8,4 +8,8 @@
     <string name="title_activity_main">MainActivity</string>
     <string name="clickenter_button_description">click to enter</string>
 
+	<string name = "mini_mainbb_logindes">Login</string>
+	<string name = "mini_mainbb_teamdes">Team</string>
+	<string name = "mini_mainbb_projectdes">Project</string>
+	<string name = "mini_mainbb_statisticdes">Statistic</string>
 </resources>
